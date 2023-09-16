@@ -2,14 +2,14 @@ class TiketEvent {
   // Deklarasi atrribut //Properties dari class TiketEvent
   private String tiket_id;
   private String namaPembeli;
-  private int event;
+  private int event_id;
   private int jumlahTiket;
 
   // Konstruktor //Constructur
   public TiketEvent() {
     tiket_id = "MOCHALLATE";
     namaPembeli = null;
-    event = 0;
+    event_id = 0;
     jumlahTiket = 0;
   }
 
@@ -23,7 +23,7 @@ class TiketEvent {
   }
 
   public int getEvent() {
-    return (event);
+    return (event_id);
   }
 
   public int getJumlahTiket() {
@@ -39,11 +39,11 @@ class TiketEvent {
     namaEvent[4] = "MPL ID S12 (RRQ VS EVOS)";
 
     // Get All Tiket Event
-    if (index != -1) {
+    if (index > -1) {
       return (namaEvent[index]);
     }
 
-    return (namaEvent[event - 1]);
+    return (namaEvent[event_id - 1]);
   }
 
   public String[] getDetailEvent(int index) {
@@ -62,12 +62,12 @@ class TiketEvent {
     detailEvent[1][4] = "JAKARTA";
 
     // Get All Detail Tiket
-    if (index != -1) {
+    if (index > -1) {
       return new String[] { detailEvent[0][index], detailEvent[1][index] };
     }
 
     // Find Detail Tiket Event Where ID Event = ID Detail Event
-    return new String[] { detailEvent[0][event - 1], detailEvent[1][event - 1] };
+    return new String[] { detailEvent[0][event_id - 1], detailEvent[1][event_id - 1] };
   }
 
   public int getHargaTiket(int index) {
@@ -78,11 +78,11 @@ class TiketEvent {
     harga[3] = 400;
     harga[4] = 500;
 
-    if (index != -1) {
+    if (index > -1) {
       return (harga[index]);
     }
 
-    return (harga[event - 1]);
+    return (harga[event_id - 1]);
   }
 
   // Mutator //Setter
@@ -94,8 +94,8 @@ class TiketEvent {
     this.namaPembeli = namaPembeli;
   }
 
-  public void setEvent(int event) {
-    this.event = event;
+  public void setEvent(int event_id) {
+    this.event_id = event_id;
   }
 
   public void setJumlahTiket(int jumlahTiket) {

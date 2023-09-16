@@ -48,8 +48,8 @@ class PemesananTiketEvent {
       jmlTiket = Integer.parseInt(jmlTiketString);
 
       // Memeriksa jika nmPembeli kosong atau jmlTiket <= 0
-      if (nmPembeli.isEmpty() || jmlTiket <= 0) {
-        System.out.println("\u001B[31mNama pembeli harus diisi atau jumlah tiket harus lebih dari 0.\u001B[0m");
+      if (nmPembeli.isEmpty() || jmlTiket <= 0 || evnt <= 0 || evnt > 5) {
+        System.out.println("\u001B[31mTidak dapat memproses pemesanan\u001B[0m");
         return; // Menghentikan program jika ada kesalahan input
       }
 
