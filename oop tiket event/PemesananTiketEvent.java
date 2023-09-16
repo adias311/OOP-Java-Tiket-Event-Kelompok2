@@ -4,7 +4,7 @@ import java.util.Random;
 class PemesananTiketEvent {
 
   // Program utama
-  public static void main(String arg[]) {
+  public static void main(String [] args) {
     // Ciptakan objek
     TiketEvent tiket = new TiketEvent();
 
@@ -14,7 +14,7 @@ class PemesananTiketEvent {
 
     int evnt = 0;
     int jmlTiket = 0;
-    String nmPembeli = "";
+    String nmPembeli = ""; 
  
     try {
  
@@ -25,7 +25,7 @@ class PemesananTiketEvent {
       // Detail tiket event
       System.out.println("\u001B[32m==============|| Daftar List Pembelian Tiket Event ||==============\u001B[0m");
 
-      for (int x = 0; x < 5; x -= -1) {
+      for (int x = 0; x < 5; x-=-1) {
         System.out.println("\u001B[31m No." + (x + 1) + "\u001B[0m");
         System.out.println("  Nama Event    : " + tiket.getNamaEvent(x));
         System.out.println("  Harga Tiket   : " + tiket.getHargaTiket(x) + "K");
@@ -76,7 +76,7 @@ class PemesananTiketEvent {
       System.out.println(" ID Tiket     : \u001B[34m" + tiket.getIdTiket() + "\u001B[0m");
       System.out.println(" Nama Event   : " + tiket.getNamaEvent(-1));
       System.out.println(" Nama Pembeli : " + tiket.getNamaPembeli());
-      System.out.println(" Jumlah Tiket : " + tiket.getJumlahTiket() + " Peserta");
+      System.out.println(" Jumlah Tiket : " + tiket.getJumlahTiket() + " Tiket");
       System.out.println(" Tanggal      : " + tiket.getDetailEvent(-1)[0]);
       System.out.println(" Lokasi       : " + tiket.getDetailEvent(-1)[1]);
       System.out.println(" Total Harga  : " + (tiket.getHargaTiket(-1) * tiket.getJumlahTiket()) + "K");

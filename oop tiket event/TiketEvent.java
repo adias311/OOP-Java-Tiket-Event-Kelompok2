@@ -1,13 +1,13 @@
 class TiketEvent {
   // Deklarasi atrribut //Properties dari class TiketEvent
-  private String idTiket;
+  private String tiket_id;
   private String namaPembeli;
   private int event;
   private int jumlahTiket;
 
   // Konstruktor //Constructur
   public TiketEvent() {
-    idTiket = "MOCHALLATE";
+    tiket_id = "MOCHALLATE";
     namaPembeli = null;
     event = 0;
     jumlahTiket = 0;
@@ -15,7 +15,7 @@ class TiketEvent {
 
   // Selector //Getter
   public String getIdTiket() {
-    return (idTiket);
+    return (tiket_id);
   }
 
   public String getNamaPembeli() {
@@ -86,8 +86,8 @@ class TiketEvent {
   }
 
   // Mutator //Setter
-  public void setIdTiket(String idTiket) {
-    this.idTiket = idTiket;
+  public void setIdTiket(String tiket_id) {
+    this.tiket_id = tiket_id;
   }
 
   public void setNamaPembeli(String namaPembeli) {
