@@ -32,10 +32,10 @@ class TiketEvent {
 
   public String getNamaEvent(int index) {
     String namaEvent[] = new String[5];
-    namaEvent[0] = "JKT48";
+    namaEvent[0] = "JKT48 (PESTAPORA 2023)";
     namaEvent[1] = "FRIENDLY MATCH (MANCHESTER CITY VS INDONESIA)";
-    namaEvent[2] = "UNINDRA SUMMER FEST";
-    namaEvent[3] = "DEPOK M";
+    namaEvent[2] = "UNINDRA SUMMER FESTIVAL";
+    namaEvent[3] = "HEAD IN THE CLOUDS (HITC 2024)";
     namaEvent[4] = "MPL ID S12 (RRQ VS EVOS)";
 
     // Get All Tiket Event
@@ -49,17 +49,17 @@ class TiketEvent {
   public String[] getDetailEvent(int index) {
     String[][] detailEvent = new String[2][5];
 
-    detailEvent[0][0] = "7 Mei 2024";
-    detailEvent[0][1] = "7 april 2024";
-    detailEvent[0][2] = "7 april 2024";
-    detailEvent[0][3] = "7 april 2024";
-    detailEvent[0][4] = "7 april 2024";
+    detailEvent[0][0] = "24 September 2023";
+    detailEvent[0][1] = "30 Februari 2024";
+    detailEvent[0][2] = "7 November 2023";
+    detailEvent[0][3] = "19 april 2024";
+    detailEvent[0][4] = "13 Oktober 2023";
 
-    detailEvent[1][0] = "JAKARTA";
-    detailEvent[1][1] = "JAKARTA";
-    detailEvent[1][2] = "JAKARTA";
-    detailEvent[1][3] = "JAKARTA";
-    detailEvent[1][4] = "JAKARTA";
+    detailEvent[1][0] = "Gambir Expo, Jiexpo Kemayoran";
+    detailEvent[1][1] = "Stadion Si Jalak Harupat, Kabupaten Bandung";
+    detailEvent[1][2] = "Taman Impian Jaya Ancol, Jakarta Utara";
+    detailEvent[1][3] = "Kawasan PIK 2, Jakarta Utara";
+    detailEvent[1][4] = "Mahaka Square, Kelapa Gading, Jakarta Utara";
 
     // Get All Detail Tiket
     if (index > -1) {

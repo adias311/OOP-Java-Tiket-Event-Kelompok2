@@ -15,7 +15,8 @@ class PemesananTiketEvent {
     int evnt = 0;
     int jmlTiket = 0;
     String nmPembeli = ""; 
- 
+    final int index = -2;
+
     try {
  
       // Membersihkan layar
@@ -48,7 +49,8 @@ class PemesananTiketEvent {
       jmlTiket = Integer.parseInt(jmlTiketString);
 
       // Memeriksa jika nmPembeli kosong atau jmlTiket <= 0
-      if (nmPembeli.isEmpty() || jmlTiket <= 0 || evnt <= 0 || evnt > 5) {
+      //Validasi input evnt harus angka 1-5
+      if (nmPembeli.isEmpty() || jmlTiket <= 0 || evnt < 1 || evnt > 5) {
         System.out.println("\u001B[31mTidak dapat memproses pemesanan\u001B[0m");
         return; // Menghentikan program jika ada kesalahan input
       }
@@ -74,12 +76,12 @@ class PemesananTiketEvent {
       System.out.println("\u001B[32m==================|| Tiket Berhasil Di Cetak ||==================\u001B[0m");
       System.out.println();
       System.out.println(" ID Tiket     : \u001B[34m" + tiket.getIdTiket() + "\u001B[0m");
-      System.out.println(" Nama Event   : " + tiket.getNamaEvent(-1));
+      System.out.println(" Nama Event   : " + tiket.getNamaEvent(index));
       System.out.println(" Nama Pembeli : " + tiket.getNamaPembeli());
       System.out.println(" Jumlah Tiket : " + tiket.getJumlahTiket() + " Tiket");
-      System.out.println(" Tanggal      : " + tiket.getDetailEvent(-1)[0]);
-      System.out.println(" Lokasi       : " + tiket.getDetailEvent(-1)[1]);
-      System.out.println(" Total Harga  : " + (tiket.getHargaTiket(-1) * tiket.getJumlahTiket()) + "K");
+      System.out.println(" Tanggal      : " + tiket.getDetailEvent(index)[0]);
+      System.out.println(" Lokasi       : " + tiket.getDetailEvent(index)[1]);
+      System.out.println(" Total Harga  : " + (tiket.getHargaTiket(index) * tiket.getJumlahTiket()) + "K");
       System.out.println();
       System.out.println("\u001B[32m=================================================================\u001B[0m");
 
