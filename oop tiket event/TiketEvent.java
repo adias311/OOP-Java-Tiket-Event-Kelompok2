@@ -70,13 +70,13 @@ class TiketEvent {
     return new String[] { detailEvent[0][event_id - 1], detailEvent[1][event_id - 1] };
   }
 
-  public int getHargaTiket(int index) {
-    int harga[] = new int[5];
-    harga[0] = 100;
-    harga[1] = 200;
-    harga[2] = 300;
-    harga[3] = 400;
-    harga[4] = 500;
+  public double getHargaTiket(int index) {
+    double harga[] = new double[5];
+    harga[0] = 100000;
+    harga[1] = 200000;
+    harga[2] = 300000;
+    harga[3] = 400000;
+    harga[4] = 500000;
 
     if (index > -1) {
       return (harga[index]);
