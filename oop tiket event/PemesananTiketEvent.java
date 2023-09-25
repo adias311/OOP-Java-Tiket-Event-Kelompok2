@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.Random;
-import java.text.NumberFormat;
 import java.util.Locale;
+import java.text.NumberFormat;
 
 class PemesananTiketEvent {
 
@@ -17,7 +17,6 @@ class PemesananTiketEvent {
     int evnt = 0;
     int jmlTiket = 0;
     String nmPembeli = "";
-    final int index = -2;
 
     try {
 
@@ -80,13 +79,13 @@ class PemesananTiketEvent {
       System.out.println("\u001B[32m==================|| Tiket Berhasil Di Cetak ||==================\u001B[0m");
       System.out.println();
       System.out.println(" ID Tiket     : \u001B[34m" + tiket.getIdTiket() + "\u001B[0m");
-      System.out.println(" Nama Event   : " + tiket.getNamaEvent(index));
+      System.out.println(" Nama Event   : " + tiket.getNamaEvent(-1));
       System.out.println(" Nama Pembeli : " + tiket.getNamaPembeli());
       System.out.println(" Jumlah Tiket : " + tiket.getJumlahTiket() + " Tiket");
-      System.out.println(" Tanggal      : " + tiket.getDetailEvent(index)[0]);
-      System.out.println(" Lokasi       : " + tiket.getDetailEvent(index)[1]);
+      System.out.println(" Tanggal      : " + tiket.getDetailEvent(-1)[0]);
+      System.out.println(" Lokasi       : " + tiket.getDetailEvent(-1)[1]);
       System.out.println(" Total Harga  : " + NumberFormat.getCurrencyInstance(new Locale("id", "ID"))
-          .format(tiket.getHargaTiket(index) * tiket.getJumlahTiket()));
+          .format(tiket.getHargaTiket(-1) * tiket.getJumlahTiket()));
       System.out.println();
       System.out.println("\u001B[32m=================================================================\u001B[0m");
 
@@ -95,6 +94,12 @@ class PemesananTiketEvent {
       System.out.println("Proses pembacaan gagal!");
 
     } catch (NumberFormatException err) {
+
+      // Blok catch ini menangkap eksepsi yang terjadi jika terjadi kesalahan saat
+      // mencoba mengonversi nilai menjadi tipe data numerik.
+
+      // NumberFormatException adalah jenis eksepsi yang terkait dengan kesalahan
+      // dalam mengonversi string menjadi tipe data numerik.
 
       System.out.println("Nilai input tidak valid!");
 
