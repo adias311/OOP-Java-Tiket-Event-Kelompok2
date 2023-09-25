@@ -7,7 +7,7 @@ class TiketEvent {
 
   // Konstruktor //Constructur
   public TiketEvent() {
-    tiket_id = "MOCHALLATE";
+    tiket_id = null;
     namaPembeli = null;
     event_id = 0;
     jumlahTiket = 0;
@@ -39,7 +39,7 @@ class TiketEvent {
     namaEvent[4] = "MPL ID S12 (RRQ VS EVOS)";
 
     // Get All Tiket Event
-    if (index > -1) {
+    if (index != -1) {
       return (namaEvent[index]);
     }
 
@@ -72,11 +72,11 @@ class TiketEvent {
 
   public double getHargaTiket(int index) {
     double harga[] = new double[5];
-    harga[0] = 100000;
-    harga[1] = 200000;
-    harga[2] = 300000;
-    harga[3] = 400000;
-    harga[4] = 500000;
+    harga[0] = 200000;
+    harga[1] = 375000;
+    harga[2] = 100000;
+    harga[3] = 2500000;
+    harga[4] = 150000;
 
     if (index > -1) {
       return (harga[index]);
@@ -101,4 +101,5 @@ class TiketEvent {
   public void setJumlahTiket(int jumlahTiket) {
     this.jumlahTiket = jumlahTiket;
   }
+
 }
